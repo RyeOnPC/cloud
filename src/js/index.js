@@ -3,7 +3,10 @@ import {userLocation, geo} from './geo.js'
 
 const body = document.querySelector('body');
 body.insertAdjacentHTML('beforeend', `
+    <header>
     <a href="./" id="cloud" title="home"><h2 class="title">c l o u d</h2></a>
+    <span>a <a href="https://ryeonpc.com/" target="_blank">ryeonpc</a> project.</span>
+    </header>
     <form method="preventDefault();">
         <span>search your location</span>
         <input></input>

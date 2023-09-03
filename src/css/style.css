@@ -70,6 +70,12 @@ a:hover {
 a:visited {
     color: #0b552d;
 }
+header > span {
+    color: #888;
+    text-align: center;
+    display: block;
+    font-size: 10pt;
+}
 #cloud>h2, #cloud {
     display: block;
     text-align: center;
