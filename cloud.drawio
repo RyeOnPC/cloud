@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" modified="2023-08-22T16:27:37.098Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="YwgmAU3mbivHJ9CmuNMS" version="21.6.8" type="device">
+  <diagram name="Page-1" id="e1Avpgrpwh86rWn3eGL3">
+    <mxGraphModel dx="1434" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zru3SAtpkOXAtRLxqaB5-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zru3SAtpkOXAtRLxqaB5-1" target="zru3SAtpkOXAtRLxqaB5-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zru3SAtpkOXAtRLxqaB5-1" value="A user enters their search into a textbox" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zru3SAtpkOXAtRLxqaB5-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zru3SAtpkOXAtRLxqaB5-2" target="zru3SAtpkOXAtRLxqaB5-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zru3SAtpkOXAtRLxqaB5-2" value="The user clicks enter" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zru3SAtpkOXAtRLxqaB5-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zru3SAtpkOXAtRLxqaB5-6" target="zru3SAtpkOXAtRLxqaB5-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zru3SAtpkOXAtRLxqaB5-6" value="the search criteria are appended to the api URL" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zru3SAtpkOXAtRLxqaB5-8" value="That API url runs and returns an array of objects" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

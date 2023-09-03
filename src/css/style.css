@@ -1,0 +1,232 @@
+html {
+    background-color: #f1f1f1;
+}
+body {
+    font-family: 'Roboto';
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    box-shadow: 0 0 100px rgba(0,0,0,0.1);
+}
+form {
+    background-color: #f1f1f1;
+    padding: 10px;
+    width: 500;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+form span {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    width: 100%;
+}
+input {
+    width: 320px;
+    padding: 8px;
+    height: 40px;
+    text-transform: uppercase;
+    border: 0px solid #ccc;
+    background-color: #fff;
+    border-radius: 3px;
+    color: #888;
+}
+button {
+    padding: 8px;
+    width: 100px;
+    height: 40px;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    color: #888;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #fff;
+    border-color: #888;
+}
+button i {
+    vertical-align: -5px;
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 14pt;
+}
+a {
+    color: #22a05b;
+    font-weight: 500;
+    text-decoration: none;
+}
+a:hover {
+    color: #62b888;
+    border-bottom: 1px solid #62b888;
+}
+a:visited {
+    color: #0b552d;
+}
+#cloud>h2, #cloud {
+    display: block;
+    text-align: center;
+    font-size: 24pt;
+    font-weight: 100;
+    transition: ease-in-out 250ms;
+}
+#cloud {
+    color: #ccc;
+}
+#cloud:hover {
+    border: none !important;
+    color: #f1f1f1 !important;
+}
+#location-list {
+    display: inline-block;
+    background-color: #f1f1f1;
+    padding: 10px;
+    width: 500;
+    border-radius: 5px;
+    margin: 5px;
+    margin: auto;
+}
+#confirmLocation {
+    padding: 35px 10px 0 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500;
+}
+.location {
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    width: auto;
+    padding: 9px;
+    max-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+.location:hover, .selected {
+    background-color: #fff;
+    border: 1px solid #f1f1f1;
+}
+.location:hover .checkbox {
+    background-color: #ccc;
+}
+.selected .checkbox {
+    border-color: #22a05b;
+    background-color: #22a05b !important;
+}
+.selected {
+    color: #22a05b;
+}
+.checkbox {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: solid 1px #ccc;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+.location>span {
+    vertical-align: middle;
+    margin-left: 5px;
+    height: 20px;
+}
+
+.countryflag {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 5px;
+    height: 5px;
+    border: 1px solid #000;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#emptyResults i {
+    color: #888;
+}
+.btn-confirmLocation {
+    margin-left: 100px;
+    width: auto;
+}
+.location-text {
+    vertical-align: bottom;
+    margin: auto 0;
+    height: 20px;
+    line-height: auto;
+}
+#sunset, #sunrise {
+    display: block;
+    width: 520;
+    border-radius: 5px;
+    color: #fff;
+    padding: 20px 10px;
+    margin: 25px 0 25px -20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: ease-in-out 250ms;
+}
+#sunset:hover, #sunrise:hover {
+    transform: scale(1.1);
+    filter: none !important;
+    transition: ease-in-out 250ms;
+}
+
+.sun-label {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14pt;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+}
+.sun-set, .sun-rise {
+    display: block;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.45);
+    margin: 5px 0;
+    backdrop-filter: blur(50px);
+}
+.sun-rise {
+    color: #006e9b;
+}
+.sun-set {
+    color: #191061;
+}
+#sunset i, #sunrise i {
+    font-size: 14pt;
+}
+#sunrise {
+    background: linear-gradient(0deg, #eb2b20 0%, #cdada1 50%, #006e9b 100%);
+}
+#sunset {
+    background: linear-gradient(0deg, #fdb851 0%, #eaa5d2 50%, #191061 100%);
+}
+#sunrise-sunset-io {
+    display: block;
+    position: fixed;
+    bottom: 2px;
+    text-align: center;
+    width: 500;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 10pt;
+}
+.rising #sunrise, .setting #sunset {
+    transform: scale(1.1);
+}
+.rising #sunset, .setting #sunrise  {
+    filter: brightness(0.75);
+}
