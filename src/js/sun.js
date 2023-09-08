@@ -4,7 +4,7 @@ export const sun = (apiUrl) => {
     fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => {
-            const now = new Date().getHours();
+            const nowUTC = new Date().getUTCHours();
 
             document.querySelector('#confirmLocation') ? document.querySelector('#confirmLocation').remove() : ''
             userLocation.utc_offset = data.results.utc_offset/60
@@ -14,18 +14,19 @@ export const sun = (apiUrl) => {
             const sunriseHour = Number(userLocation.sunrise.split(':')[0])
             const sunsetHour = Number(userLocation.sunset.split(':')[0]) + 12
 
+
             const timeOverThere = () => {
-                let time = Number(now + (now + userLocation.utc_offset))
-                time = time % 24
+                let time = Number(nowUTC + userLocation.utc_offset) % 24
                 // if (time > 24) {
                 //     time = time - 24
                 // } else if (time < 0) {
                 //     time = time + 24
                 // }
+                console.log(sunriseHour, time, sunsetHour)
                 return time
             }
             const sunFunc = () => {
-                return (timeOverThere() > sunriseHour && timeOverThere() < sunsetHour) ? 'setting' : 'rising'
+                return (timeOverThere() > sunriseHour && timeOverThere() < sunsetHour ? 'setting' : 'rising')
             }
             
             document.querySelector('#location-list').innerHTML = `
