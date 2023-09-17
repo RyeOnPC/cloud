@@ -8,8 +8,7 @@ body.insertAdjacentHTML('beforeend', `
     <span>a <a href="https://ryeonpc.com/" target="_blank">ryeonpc</a> project.</span>
     </header>
     <form method="preventDefault();">
-        <span>search your location ➡️</span>
-        <input></input>
+        <input placeholder="search your location"></input>
         <button>Submit</button>
     </form>
     <div id="location-list"></div>
