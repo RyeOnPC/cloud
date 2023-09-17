@@ -11,7 +11,7 @@ export const renderConfirm = (userLocation) => {
     document.querySelector('body').insertAdjacentHTML('beforeend', `
     <div id="confirmLocation">
         <span class="location-text"><a href="https://www.google.com/maps/search/?api=1&query=${userLocation.locationLong}" target="_blank">Is this the correct location?</a></span>
-        <button class="btn-confirmLocation"><i class="ms-Icon ms-Icon--BoxCheckmarkSolid" aria-hidden="true"></i>This is it!</button>
+        <button class="btn-confirmLocation">✅ Confirm</button>
     </div>
     `)
     document.querySelector('.btn-confirmLocation').addEventListener('click', (e) => {
