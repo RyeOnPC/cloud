@@ -16,34 +16,52 @@ export const sun = (apiUrl) => {
 
 
             const timeOverThere = () => {
-                let time = Number(nowUTC + userLocation.utc_offset) % 24
-                // if (time > 24) {
-                //     time = time - 24
-                // } else if (time < 0) {
-                //     time = time + 24
-                // }
-                console.log(sunriseHour, time, sunsetHour)
-                return time
+                return Number(nowUTC + userLocation.utc_offset + 24 ) % 24
             }
             const sunFunc = () => {
-                return (timeOverThere() > sunriseHour && timeOverThere() < sunsetHour ? 'setting' : 'rising')
+                if (timeOverThere() > sunriseHour && timeOverThere() < sunsetHour) {
+                    return 'setting'
+                } else {
+                    return 'rising'
+                }
             }
-            
+
+            const sunriseDiv = `<div id="sunrise">
+                <span class="sun-label"><i class="ms-Icon ms-Icon--Sunny" aria-hidden="true"></i>Sunrise:</span>
+                <div class="bubbles">
+                <span class="sun-rise i1">${userLocation.sunrise}</span>
+                <span class="i1"></span>
+                <span class="i2"></span>
+                <span class="i3"></span>
+                <span class="i4"></span>
+                </div>
+            </div>`
+
+            const sunsetDiv = `<div id="sunset">
+                <span class="sun-label"><i class="ms-Icon ms-Icon--ClearNight" aria-hidden="true"></i>Sunset:</span>
+                <div class="bubbles">
+                <span class="sun-set i1">${userLocation.sunset}</span>
+                <span class="i1"></span>
+                <span class="i2"></span>
+                <span class="i3"></span>
+                <span class="i4"></span>
+                </div>
+            </div>`
+
+            const reorderDivs = function() {
+                const divArr = [sunriseDiv, sunsetDiv]
+                if (sunFunc() == 'rising') {
+                    return divArr.join('')
+                } else if (sunFunc() == 'setting') {
+                    return divArr.reverse().join('')
+                }
+            }
+            console.log(reorderDivs())
             document.querySelector('#location-list').innerHTML = `
             <span class="location-text">${userLocation.locationLong}</span>
 
             <div class="${sunFunc()}">
-                <div id="sunrise">
-                    <i class="ms-Icon ms-Icon--Sunny" aria-hidden="true"></i>
-                    <span class="sun-label">Sunrise:</span>
-                    <span class="sun-rise">${userLocation.sunrise}</span>
-                </div>
-
-                <div id="sunset">
-                    <i class="ms-Icon ms-Icon--ClearNight" aria-hidden="true"></i>
-                    <span class="sun-label">Sunset:</span>
-                    <span class="sun-set">${userLocation.sunset}</span>
-                </div>
+                ${reorderDivs()}
             </div>
             `
             
